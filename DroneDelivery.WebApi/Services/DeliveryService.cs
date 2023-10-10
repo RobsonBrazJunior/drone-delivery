@@ -15,6 +15,8 @@ namespace DroneDelivery.WebApi.Services
 		{
 			var graph = await _graphService.GetGraphAsync();
 
+			ValidateEntries(entries, graph);
+
 			var shortestPath1 = FindShortestPath(graph, entries.ElementAt(0), entries.ElementAt(1));
 			var shortestPath2 = FindShortestPath(graph, entries.ElementAt(1), entries.ElementAt(2));
 
@@ -24,6 +26,17 @@ namespace DroneDelivery.WebApi.Services
 			shortestPath2.RemoveAt(0);
 
 			return $"{string.Join(" -> ", shortestPath1)} -> {string.Join(" -> ", shortestPath2)}, and will take {Math.Round(timeFirstPath + timeSecondPath, 2)} seconds to be delivered as fast as possible.";
+		}
+
+		private void ValidateEntries(IList<string> entries, Dictionary<string, Dictionary<string, double>> graph)
+		{
+			foreach (var entry in entries)
+			{
+				if (!graph.ContainsKey(entry))
+				{
+					throw new ArgumentException($"A entrada '{entry}' não existe no grafo.");
+				}
+			}
 		}
 
 		private List<string> FindShortestPath(Dictionary<string, Dictionary<string, double>> graph, string start, string stop)

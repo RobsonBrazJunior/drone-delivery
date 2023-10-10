@@ -5,7 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DroneDelivery.Domain", "DroneDelivery.Domain\DroneDelivery.Domain.csproj", "{166B5321-7F0D-4B72-A578-1346E5D2BCCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneDelivery.WebApi", "DroneDelivery.WebApi\DroneDelivery.WebApi.csproj", "{3CB594C5-DF7A-4A49-BB5E-778257A4E982}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DroneDelivery.WebApi", "DroneDelivery.WebApi\DroneDelivery.WebApi.csproj", "{3CB594C5-DF7A-4A49-BB5E-778257A4E982}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DroneDelivery.Tests", "DroneDelivery.Tests\DroneDelivery.Tests.csproj", "{8532B5A9-75BD-4EA4-A475-6494262A1FB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3CB594C5-DF7A-4A49-BB5E-778257A4E982}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CB594C5-DF7A-4A49-BB5E-778257A4E982}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CB594C5-DF7A-4A49-BB5E-778257A4E982}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8532B5A9-75BD-4EA4-A475-6494262A1FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8532B5A9-75BD-4EA4-A475-6494262A1FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8532B5A9-75BD-4EA4-A475-6494262A1FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8532B5A9-75BD-4EA4-A475-6494262A1FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
